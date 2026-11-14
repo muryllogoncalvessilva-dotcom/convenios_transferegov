@@ -185,13 +185,29 @@ def br(d):
     return d.strftime("%d/%m/%Y") if d else ""
 
 
-def alerta_vigencia(dias, situacao=""):
-    """Regra do controle: amarelo a 90 dias do fim, vermelho a 60; vencido se passou. Encerrados não alertam."""
+ENCERRADOS = ("PRESTAÇÃO DE CONTAS EM ANÁLISE", "PRESTACAO DE CONTAS EM ANALISE", "COMPROVADA EM ANÁLISE", "COMPROVADA EM ANALISE",
+              "PRESTAÇÃO DE CONTAS CONCLU", "PRESTACAO DE CONTAS CONCLU", "PRESTAÇÃO DE CONTAS APROVADA", "PRESTACAO DE CONTAS APROVADA",
+              "PRESTAÇÃO DE CONTAS REJEITADA", "PRESTACAO DE CONTAS REJEITADA", "ANULAD", "CANCELAD", "RESCINDID", "ENCERRAD", "EXTINT")
+
+
+def alerta_vigencia(dias, situacao="", assinado="SIM"):
+    """
+    Regra do controle (aprendida com o dado real):
+      NÃO ASSINADO   proposta aprovada que nunca virou instrumento (IND_ASSINADO = NÃO): não é vencida, é papel.
+      PRESTAR CONTAS vigência acabou e a situação é "Aguardando Prestação de Contas": o prazo que vale é o da PC.
+      ENCERRADO      prestação de contas em análise/concluída/aprovada/rejeitada, anulado, cancelado, rescindido.
+      VENCIDO        fim de vigência no passado com o instrumento ainda em execução (precisa de TA ou de encerrar).
+      VERMELHO       até 60 dias do fim; AMARELO até 90; OK além disso.
+    """
+    if str(assinado or "").strip().upper() in ("NÃO", "NAO", "N"):
+        return "NÃO ASSINADO"
+    s = (situacao or "").upper()
+    if "AGUARDANDO PRESTA" in s:
+        return "PRESTAR CONTAS"
+    if any(x in s for x in ENCERRADOS):
+        return "ENCERRADO"
     if dias is None:
         return ""
-    s = (situacao or "").upper()
-    if any(x in s for x in ("PRESTAÇÃO DE CONTAS", "PRESTACAO DE CONTAS", "CONCLU", "CANCELAD", "RESCINDID", "ENCERRAD", "ANULAD")):
-        return "ENCERRADO"
     if dias < 0:
         return "VENCIDO"
     if dias <= 60:
@@ -267,8 +283,10 @@ def montar_resumo(t, hoje):
             "FIM_VIGENCIA": iso(fim),
             "FIM_VIGENCIA_ORIGINAL": iso(data(c.get("DIA_FIM_VIGENC_ORIGINAL_CONV"))),
             "DIAS_PARA_FIM": dias,
-            "ALERTA_VIGENCIA": alerta_vigencia(dias, c.get("SIT_CONVENIO", "")),
+            "ALERTA_VIGENCIA": alerta_vigencia(dias, c.get("SIT_CONVENIO", ""), c.get("IND_ASSINADO", "SIM")),
+            "ASSINADO": c.get("IND_ASSINADO", ""),
             "LIMITE_PREST_CONTAS": iso(data(c.get("DIA_LIMITE_PREST_CONTAS"))),
+            "DIAS_PARA_PREST_CONTAS": (data(c.get("DIA_LIMITE_PREST_CONTAS")) - hoje).days if data(c.get("DIA_LIMITE_PREST_CONTAS")) else None,
             "VL_GLOBAL": numero(c.get("VL_GLOBAL_CONV")),
             "VL_REPASSE": vl_rep,
             "VL_CONTRAPARTIDA": numero(c.get("VL_CONTRAPARTIDA_CONV")),
@@ -287,7 +305,7 @@ def montar_resumo(t, hoje):
             "ULTIMA_MEDICAO_SITUACAO": ult_med_sit,
             "ULTIMA_MEDICAO_FIM": iso(ult_med_fim),
         })
-    ordem = {"VENCIDO": 0, "VERMELHO": 1, "AMARELO": 2, "OK": 3, "": 4, "ENCERRADO": 5}
+    ordem = {"VENCIDO": 0, "PRESTAR CONTAS": 1, "VERMELHO": 2, "AMARELO": 3, "OK": 4, "": 5, "NÃO ASSINADO": 6, "ENCERRADO": 7}
     linhas.sort(key=lambda l: (ordem.get(l["ALERTA_VIGENCIA"], 9), l["DIAS_PARA_FIM"] if l["DIAS_PARA_FIM"] is not None else 10**6))
     return linhas
 
@@ -304,16 +322,25 @@ def resumo_markdown(linhas, meta):
     t.append("Fonte: dados abertos do Transferegov.br (carga de **" + (meta.get("data_carga") or "?") +
              "**), gerado em " + hoje + ". " + str(len(linhas)) + " instrumento(s). Sem IA: só leitura, junção e regras.")
     t.append("")
-    ativos = [l for l in linhas if l["ALERTA_VIGENCIA"] not in ("ENCERRADO", "")]
-    alertas = [l for l in ativos if l["ALERTA_VIGENCIA"] in ("VENCIDO", "VERMELHO", "AMARELO")]
-    t.append("## Alertas de vigência (" + str(len(alertas)) + ")")
+    alertas = [l for l in linhas if l["ALERTA_VIGENCIA"] in ("VENCIDO", "PRESTAR CONTAS", "VERMELHO", "AMARELO")]
+    t.append("## Alertas (" + str(len(alertas)) + ")")
     t.append("")
     if alertas:
         for l in alertas:
-            t.append("- **" + l["ALERTA_VIGENCIA"] + "** · " + l["NR_CONVENIO"] + " · " + (l["ORGAO_SUPERIOR"] or "") +
-                     " · fim " + br(data(l["FIM_VIGENCIA"])) + " (" + str(l["DIAS_PARA_FIM"]) + " dias) · " + l["SITUACAO"])
+            if l["ALERTA_VIGENCIA"] == "PRESTAR CONTAS":
+                lim = data(l["LIMITE_PREST_CONTAS"])
+                extra = (" · limite da PC " + br(lim) + " (" + str(l["DIAS_PARA_PREST_CONTAS"]) + " dias)") if lim else " · limite da PC não informado"
+                t.append("- **PRESTAR CONTAS** · " + l["NR_CONVENIO"] + " · " + (l["ORGAO_SUPERIOR"] or "") +
+                         " · vigência acabou em " + br(data(l["FIM_VIGENCIA"])) + extra)
+            else:
+                t.append("- **" + l["ALERTA_VIGENCIA"] + "** · " + l["NR_CONVENIO"] + " · " + (l["ORGAO_SUPERIOR"] or "") +
+                         " · fim " + br(data(l["FIM_VIGENCIA"])) + " (" + str(l["DIAS_PARA_FIM"]) + " dias) · " + l["SITUACAO"])
     else:
-        t.append("Nenhum instrumento ativo vence nos próximos 90 dias.")
+        t.append("Nenhum instrumento ativo vence nos próximos 90 dias nem aguarda prestação de contas.")
+    nao_assinados = [l["NR_CONVENIO"] for l in linhas if l["ALERTA_VIGENCIA"] == "NÃO ASSINADO"]
+    if nao_assinados:
+        t.append("")
+        t.append("Propostas aprovadas nunca assinadas (fora dos alertas): " + ", ".join(nao_assinados) + ".")
     t.append("")
     t.append("## Todos os instrumentos")
     t.append("")
@@ -329,7 +356,9 @@ def resumo_markdown(linhas, meta):
             ((l["ULTIMA_SITUACAO"] or "")[:40] + (" (" + br(data(l["ULTIMA_SITUACAO_EM"])) + ")" if l["ULTIMA_SITUACAO_EM"] else "")),
         ]).replace("\n", " ") + " |")
     t.append("")
-    t.append("Regra de alerta: AMARELO a 90 dias do fim da vigência, VERMELHO a 60, VENCIDO depois; ENCERRADO quando a situação é de prestação de contas/concluído/cancelado.")
+    t.append("Regra de alerta: AMARELO a 90 dias do fim da vigência, VERMELHO a 60, VENCIDO depois (instrumento ainda em execução); "
+             "PRESTAR CONTAS quando a situação é 'Aguardando Prestação de Contas'; ENCERRADO para PC em análise/concluída/aprovada/rejeitada, anulado, cancelado ou rescindido; "
+             "NÃO ASSINADO para proposta aprovada que nunca virou instrumento.")
     return "\n".join(t) + "\n"
 
 
