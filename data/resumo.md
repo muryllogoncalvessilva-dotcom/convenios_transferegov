@@ -2,37 +2,29 @@
 
 Fonte: dados abertos do Transferegov.br (carga de **09/11/2026 06:34:43**), gerado em 2026-11-14. 63 instrumento(s). Sem IA: só leitura, junção e regras.
 
-## Alertas de vigência (14)
+## Alertas (9)
 
-- **VENCIDO** · 722593 · MINISTÉRIO DA CIÊNCIA, TECNOLOGIA E INOVAÇÃO · fim 30/12/2011 (-5433 dias) · Proposta/Plano de Trabalho Aprovado
-- **VENCIDO** · 735724 · MINISTÉRIO DA CIÊNCIA, TECNOLOGIA E INOVAÇÃO · fim 02/01/2012 (-5430 dias) · 
-- **VENCIDO** · 817709 · MINISTERIO DO ESPORTE · fim 01/03/2016 (-3910 dias) · 
-- **VENCIDO** · 839722 · MINISTERIO DAS CIDADES · fim 31/12/2019 (-2510 dias) · Proposta/Plano de Trabalho Aprovado
-- **VENCIDO** · 837303 · MINISTERIO DO TURISMO · fim 31/12/2019 (-2510 dias) · Proposta/Plano de Trabalho Aprovado
-- **VENCIDO** · 930584 · MINISTERIO DO ESPORTE · fim 31/12/2024 (-683 dias) · 
-- **VENCIDO** · 910284 · MINISTÉRIO DA AGRICULTURA E PECUÁRIA · fim 31/12/2024 (-683 dias) · Proposta/Plano de Trabalho Aprovado
-- **VENCIDO** · 939464 · MINISTERIO DO TURISMO · fim 31/12/2025 (-318 dias) · Proposta/Plano de Trabalho Aprovado
-- **VENCIDO** · 957048 · MINISTERIO DA EDUCACAO · fim 22/04/2026 (-206 dias) · Proposta/Plano de Trabalho Aprovado
 - **VENCIDO** · 802347 · MINISTERIO DO TURISMO · fim 30/10/2026 (-15 dias) · Em execução
+- **PRESTAR CONTAS** · 888442 · MINISTERIO DAS CIDADES · vigência acabou em 26/06/2026 · limite da PC 25/08/2026 (-81 dias)
+- **PRESTAR CONTAS** · 909069 · MINISTERIO DO TURISMO · vigência acabou em 30/06/2026 · limite da PC 29/08/2026 (-77 dias)
+- **PRESTAR CONTAS** · 868305 · MINISTERIO DAS CIDADES · vigência acabou em 26/10/2026 · limite da PC 25/12/2026 (41 dias)
+- **PRESTAR CONTAS** · 868301 · MINISTERIO DAS CIDADES · vigência acabou em 26/10/2026 · limite da PC 25/12/2026 (41 dias)
 - **VERMELHO** · 917818 · MINISTERIO DAS CIDADES · fim 29/11/2026 (15 dias) · Em execução
 - **VERMELHO** · 909493 · MINISTERIO DAS CIDADES · fim 26/12/2026 (42 dias) · Em execução
 - **VERMELHO** · 908393 · MINISTERIO DAS CIDADES · fim 28/12/2026 (44 dias) · Em execução
 - **VERMELHO** · 973269 · MINISTERIO DA SAUDE · fim 31/12/2026 (47 dias) · Em execução
 
+Propostas aprovadas nunca assinadas (fora dos alertas): 722593, 735724, 780196, 817709, 839722, 837303, 930584, 910284, 939464, 957048.
+
 ## Todos os instrumentos
 
 | Nº | Órgão | Situação | Fim vigência | Dias | Alerta | Repasse | Desemb. % | Saldo conta | TA | Prorr. | Último BM | Última situação |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 722593 | MINISTÉRIO DA CIÊNCIA, TECNO | Proposta/Plano de Trabalho Aprovado | 30/12/2011 | -5433 | VENCIDO | R$ 450.000,00 |  |  | 0 | 0 |  |  |
-| 735724 | MINISTÉRIO DA CIÊNCIA, TECNO |  | 02/01/2012 | -5430 | VENCIDO | R$ 500.000,00 |  |  | 0 | 0 |  |  |
-| 817709 | MINISTERIO DO ESPORTE |  | 01/03/2016 | -3910 | VENCIDO | R$ 800.000,00 |  | R$ 0,00 | 0 | 0 |  |  |
-| 839722 | MINISTERIO DAS CIDADES | Proposta/Plano de Trabalho Aprovado | 31/12/2019 | -2510 | VENCIDO | R$ 975.336,40 |  | R$ 0,00 | 0 | 0 |  |  |
-| 837303 | MINISTERIO DO TURISMO | Proposta/Plano de Trabalho Aprovado | 31/12/2019 | -2510 | VENCIDO | R$ 778.537,50 |  | R$ 0,00 | 0 | 0 |  |  |
-| 930584 | MINISTERIO DO ESPORTE |  | 31/12/2024 | -683 | VENCIDO | R$ 350.000,00 |  |  | 0 | 0 |  |  |
-| 910284 | MINISTÉRIO DA AGRICULTURA E  | Proposta/Plano de Trabalho Aprovado | 31/12/2024 | -683 | VENCIDO | R$ 477.500,00 |  | R$ 0,00 | 0 | 0 |  |  |
-| 939464 | MINISTERIO DO TURISMO | Proposta/Plano de Trabalho Aprovado | 31/12/2025 | -318 | VENCIDO | R$ 1.249.036,00 |  | R$ 0,00 | 0 | 0 |  |  |
-| 957048 | MINISTERIO DA EDUCACAO | Proposta/Plano de Trabalho Aprovado | 22/04/2026 | -206 | VENCIDO | R$ 468.560,00 |  | R$ 3.655,52 | 0 | 0 |  |  |
 | 802347 | MINISTERIO DO TURISMO | Em execução | 30/10/2026 | -15 | VENCIDO | R$ 1.641.666,83 | 100,0% | R$ 566.204,92 | 14 | 3 |  | EM_EXECUCAO (29/10/2026) |
+| 888442 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/06/2026 | -141 | PRESTAR CONTAS | R$ 477.500,00 | 100,0% | R$ 352.891,72 | 4 | 0 | 5 Aceita | AGUARDANDO_PRESTACAO_CONTAS (06/01/2026) |
+| 909069 | MINISTERIO DO TURISMO | Aguardando Prestação de Contas | 30/06/2026 | -137 | PRESTAR CONTAS | R$ 3.343.600,18 | 100,0% | R$ 1.302.930,06 | 5 | 2 | 10 Aceita | AGUARDANDO_PRESTACAO_CONTAS (30/04/2026) |
+| 868305 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/10/2026 | -19 | PRESTAR CONTAS | R$ 746.666,67 | 100,0% | R$ 505.680,59 | 8 | 1 |  | EM_EXECUCAO (16/06/2026) |
+| 868301 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/10/2026 | -19 | PRESTAR CONTAS | R$ 689.540,00 | 100,0% | R$ 682.667,95 | 9 | 1 |  | EM_EXECUCAO (16/06/2026) |
 | 917818 | MINISTERIO DAS CIDADES | Em execução | 29/11/2026 | 15 | VERMELHO | R$ 754.157,00 | 100,0% | R$ 73.777,14 | 2 | 1 | 6 Atestada | AGUARDANDO_PRESTACAO_CONTAS (17/10/2024) |
 | 909493 | MINISTERIO DAS CIDADES | Em execução | 26/12/2026 | 42 | VERMELHO | R$ 1.500.000,00 | 100,0% | R$ 644.779,89 | 6 | 0 | 8 Enviada para o Convenente | EM_EXECUCAO (01/06/2026) |
 | 908393 | MINISTERIO DAS CIDADES | Em execução | 28/12/2026 | 44 | VERMELHO | R$ 1.441.714,00 | 100,0% | R$ 841.152,45 | 5 | 0 | 4 Aceita | EM_EXECUCAO (09/10/2026) |
@@ -44,9 +36,18 @@ Fonte: dados abertos do Transferegov.br (carga de **09/11/2026 06:34:43**), gera
 | 963049 | MINISTERIO DAS CIDADES | Em execução | 26/06/2028 | 590 | OK | R$ 1.529.214,00 |  | R$ 0,00 | 1 | 0 |  | EM_EXECUCAO (18/09/2026) |
 | 962667 | MINISTERIO DA EDUCACAO | Em execução | 04/07/2028 | 598 | OK | R$ 10.670.503,39 | 15,0% | R$ 1.800.572,28 | 1 | 0 |  | EM_EXECUCAO (27/07/2026) |
 | 964973 | MINISTERIO DAS CIDADES | Em execução | 25/07/2028 | 619 | OK | R$ 1.333.161,44 | 100,0% | R$ 1.226.435,74 | 1 | 0 | 2 Atestada | EM_EXECUCAO (23/04/2026) |
+| 722593 | MINISTÉRIO DA CIÊNCIA, TECNO | Proposta/Plano de Trabalho Aprovado | 30/12/2011 | -5433 | NÃO ASSINADO | R$ 450.000,00 |  |  | 0 | 0 |  |  |
+| 735724 | MINISTÉRIO DA CIÊNCIA, TECNO |  | 02/01/2012 | -5430 | NÃO ASSINADO | R$ 500.000,00 |  |  | 0 | 0 |  |  |
+| 780196 | MINISTERIO DA CULTURA | Cancelado | 31/08/2013 | -4823 | NÃO ASSINADO | R$ 300.000,00 |  |  | 0 | 0 |  |  |
+| 817709 | MINISTERIO DO ESPORTE |  | 01/03/2016 | -3910 | NÃO ASSINADO | R$ 800.000,00 |  | R$ 0,00 | 0 | 0 |  |  |
+| 839722 | MINISTERIO DAS CIDADES | Proposta/Plano de Trabalho Aprovado | 31/12/2019 | -2510 | NÃO ASSINADO | R$ 975.336,40 |  | R$ 0,00 | 0 | 0 |  |  |
+| 837303 | MINISTERIO DO TURISMO | Proposta/Plano de Trabalho Aprovado | 31/12/2019 | -2510 | NÃO ASSINADO | R$ 778.537,50 |  | R$ 0,00 | 0 | 0 |  |  |
+| 930584 | MINISTERIO DO ESPORTE |  | 31/12/2024 | -683 | NÃO ASSINADO | R$ 350.000,00 |  |  | 0 | 0 |  |  |
+| 910284 | MINISTÉRIO DA AGRICULTURA E  | Proposta/Plano de Trabalho Aprovado | 31/12/2024 | -683 | NÃO ASSINADO | R$ 477.500,00 |  | R$ 0,00 | 0 | 0 |  |  |
+| 939464 | MINISTERIO DO TURISMO | Proposta/Plano de Trabalho Aprovado | 31/12/2025 | -318 | NÃO ASSINADO | R$ 1.249.036,00 |  | R$ 0,00 | 0 | 0 |  |  |
+| 957048 | MINISTERIO DA EDUCACAO | Proposta/Plano de Trabalho Aprovado | 22/04/2026 | -206 | NÃO ASSINADO | R$ 468.560,00 |  | R$ 3.655,52 | 0 | 0 |  |  |
 | 718166 | MINISTÉRIO DO DESENVOLVIMENT | Prestação de Contas Rejeitada | 31/05/2011 | -5646 | ENCERRADO | R$ 249.451,70 | 100,0% |  | 0 | 0 |  | PRESTACAO_CONTAS_REJEITADA (05/04/2019) |
 | 723744 | MINISTERIO DA JUSTICA E SEGU | Prestação de Contas em Análise | 22/05/2012 | -5289 | ENCERRADO | R$ 596.033,00 | 100,0% |  | 0 | 1 |  | PRESTACAO_CONTAS_EM_ANALISE (18/02/2020) |
-| 780196 | MINISTERIO DA CULTURA | Cancelado | 31/08/2013 | -4823 | ENCERRADO | R$ 300.000,00 |  |  | 0 | 0 |  |  |
 | 737382 | MINISTÉRIO DO DESENVOLVIMENT | Prestação de Contas Aprovada com Ressalvas | 27/04/2014 | -4584 | ENCERRADO | R$ 450.000,00 | 100,0% |  | 2 | 0 |  | PRESTACAO_CONTAS_APROVADA_COM_RESSALVAS (22/11/2016) |
 | 798085 | MINISTERIO DAS CIDADES | Prestação de Contas Concluída | 26/10/2018 | -2941 | ENCERRADO | R$ 868.107,32 | 100,0% | R$ 0,00 | 5 | 1 |  | PRESTACAO_CONTAS_CONCLUIDA (31/05/2023) |
 | 850500 | MINISTERIO DO ESPORTE | Prestação de Contas Concluída | 26/12/2018 | -2880 | ENCERRADO | R$ 575.000,00 | 98,6% | R$ 0,00 | 1 | 0 |  | PRESTACAO_CONTAS_APROVADA (25/06/2024) |
@@ -81,10 +82,6 @@ Fonte: dados abertos do Transferegov.br (carga de **09/11/2026 06:34:43**), gera
 | 952866 | MINISTÉRIO DA INTEGRAÇÃO E D | Prestação de Contas Concluída | 31/12/2025 | -318 | ENCERRADO | R$ 800.000,00 | 94,7% | R$ 0,00 | 0 | 0 |  | PRESTACAO_CONTAS_EM_ANALISE (31/03/2025) |
 | 891768 | MINISTERIO DAS CIDADES | Prestação de Contas Concluída | 31/12/2025 | -318 | ENCERRADO | R$ 477.500,00 | 100,0% | R$ 0,00 | 4 | 0 | 8 Aceita | PRESTACAO_CONTAS_CONCLUIDA (20/05/2026) |
 | 955717 | MINISTERIO DA JUSTICA E SEGU | Prestação de Contas Comprovada em Análise | 10/03/2026 | -249 | ENCERRADO | R$ 770.390,71 | 85,7% | R$ 0,00 | 0 | 0 |  | PRESTACAO_CONTAS_COMPROVADA_EM_ANALISE (10/02/2026) |
-| 888442 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/06/2026 | -141 | ENCERRADO | R$ 477.500,00 | 100,0% | R$ 352.891,72 | 4 | 0 | 5 Aceita | AGUARDANDO_PRESTACAO_CONTAS (06/01/2026) |
-| 909069 | MINISTERIO DO TURISMO | Aguardando Prestação de Contas | 30/06/2026 | -137 | ENCERRADO | R$ 3.343.600,18 | 100,0% | R$ 1.302.930,06 | 5 | 2 | 10 Aceita | AGUARDANDO_PRESTACAO_CONTAS (30/04/2026) |
-| 868305 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/10/2026 | -19 | ENCERRADO | R$ 746.666,67 | 100,0% | R$ 505.680,59 | 8 | 1 |  | EM_EXECUCAO (16/06/2026) |
-| 868301 | MINISTERIO DAS CIDADES | Aguardando Prestação de Contas | 26/10/2026 | -19 | ENCERRADO | R$ 689.540,00 | 100,0% | R$ 682.667,95 | 9 | 1 |  | EM_EXECUCAO (16/06/2026) |
 | 962675 | MINISTERIO DA EDUCACAO | Prestação de Contas Concluída | 27/06/2028 | 591 | ENCERRADO | R$ 3.135.514,72 | 15,1% | R$ 0,00 | 2 | 0 |  | PRESTACAO_CONTAS_CONCLUIDA (21/07/2026) |
 
-Regra de alerta: AMARELO a 90 dias do fim da vigência, VERMELHO a 60, VENCIDO depois; ENCERRADO quando a situação é de prestação de contas/concluído/cancelado.
+Regra de alerta: AMARELO a 90 dias do fim da vigência, VERMELHO a 60, VENCIDO depois (instrumento ainda em execução); PRESTAR CONTAS quando a situação é 'Aguardando Prestação de Contas'; ENCERRADO para PC em análise/concluída/aprovada/rejeitada, anulado, cancelado ou rescindido; NÃO ASSINADO para proposta aprovada que nunca virou instrumento.
