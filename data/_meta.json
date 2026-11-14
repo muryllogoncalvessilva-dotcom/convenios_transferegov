@@ -1,0 +1,21 @@
+{
+ "gerado_em": "2026-11-14T19:09:12+00:00",
+ "data_carga": "09/11/2026 06:34:43",
+ "cod_munic_ibge": "2606804",
+ "municipio_nome": "IGARASSU",
+ "uf": "PE",
+ "fonte": "https://api-publica.transferegov.gestao.gov.br/downloads/dadosgov/",
+ "licenca": "ODbL 1.0",
+ "tabelas": {
+  "proposta": 189,
+  "convenio": 63,
+  "historico_situacao": 1396,
+  "termo_aditivo": 148,
+  "prorroga_oficio": 24,
+  "desbloqueio_cr": 293,
+  "desembolso": 120,
+  "empenho": 110,
+  "cronograma_desembolso": 386,
+  "acomp_obras_contratos_medicoes_modulo_empresas": 11
+ }
+}
