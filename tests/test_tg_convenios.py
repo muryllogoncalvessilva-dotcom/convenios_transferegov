@@ -28,6 +28,10 @@ PROPOSTA = [
      "00.000.000/0001-00", "MUNICIPIO DE CIDADE EXEMPLO", "Proposta/Plano de Trabalho Aprovados", "Pavimentação da Rua A", "1.000.000,00", "900.000,00", "100.000,00", "2018", "00000-000"],
     ["1002", "2/2021", "XX", "CIDADE EXEMPLO", "9999999", "26000", "MINISTERIO EXEMPLO B", "26001", "CAIXA", "CONTRATO DE REPASSE",
      "00.000.000/0001-00", "MUNICIPIO DE CIDADE EXEMPLO", "Proposta/Plano de Trabalho Aprovados", "Construção de quadra", "500.000,00", "450.000,00", "50.000,00", "2021", "00000-000"],
+    ["1003", "4/2019", "XX", "CIDADE EXEMPLO", "9999999", "56000", "MINISTERIO EXEMPLO A", "56001", "CAIXA", "CONTRATO DE REPASSE",
+     "00.000.000/0001-00", "MUNICIPIO DE CIDADE EXEMPLO", "Proposta/Plano de Trabalho Aprovados", "Drenagem", "300.000,00", "300.000,00", "0,00", "2019", "00000-000"],
+    ["1004", "5/2012", "XX", "CIDADE EXEMPLO", "9999999", "56000", "MINISTERIO EXEMPLO A", "56001", "CAIXA", "CONVENIO",
+     "00.000.000/0001-00", "MUNICIPIO DE CIDADE EXEMPLO", "Proposta/Plano de Trabalho Aprovados", "Nunca assinado", "50.000,00", "50.000,00", "0,00", "2012", "00000-000"],
     ["2001", "3/2020", "YY", "OUTRA CIDADE", "8888888", "26000", "MINISTERIO EXEMPLO B", "26001", "CAIXA", "CONVENIO",
      "11.111.111/0001-11", "MUNICIPIO DE OUTRA CIDADE", "Proposta/Plano de Trabalho Aprovados", "Outra coisa", "1,00", "1,00", "0,00", "2020", "00000-000"],
 ]
@@ -40,11 +44,12 @@ CONVENIO_CAB = ["NR_CONVENIO", "ID_PROPOSTA", "DIA", "MES", "ANO", "DIA_ASSIN_CO
                 "VALOR_GLOBAL_ORIGINAL_CONV"]
 
 
-def linha_convenio(nr, idp, fim, sit="Em execução", repasse="900.000,00", desemb="450.000,00", ta="2", pro="1", saldo="12.345,67"):
+def linha_convenio(nr, idp, fim, sit="Em execução", repasse="900.000,00", desemb="450.000,00", ta="2", pro="1", saldo="12.345,67", assinado="SIM", limite_pc=""):
     v = {c: "" for c in CONVENIO_CAB}
     v.update({"NR_CONVENIO": nr, "ID_PROPOSTA": idp, "DIA_ASSIN_CONV": "10/12/2018", "SIT_CONVENIO": sit, "INSTRUMENTO_ATIVO": "SIM",
+              "IND_ASSINADO": assinado, "DIA_LIMITE_PREST_CONTAS": limite_pc,
               "DIA_INIC_VIGENC_CONV": "10/12/2018", "DIA_FIM_VIGENC_CONV": fim, "DIA_FIM_VIGENC_ORIGINAL_CONV": "10/12/2020",
-              "DIA_LIMITE_PREST_CONTAS": "", "QTD_TA": ta, "QTD_PRORROGA": pro, "VL_GLOBAL_CONV": "1.000.000,00",
+              "QTD_TA": ta, "QTD_PRORROGA": pro, "VL_GLOBAL_CONV": "1.000.000,00",
               "VL_REPASSE_CONV": repasse, "VL_CONTRAPARTIDA_CONV": "100.000,00", "VL_EMPENHADO_CONV": repasse,
               "VL_DESEMBOLSADO_CONV": desemb, "VL_SALDO_CONTA": saldo})
     return [v[c] for c in CONVENIO_CAB]
@@ -55,6 +60,8 @@ TABELAS = {
     "convenio": [CONVENIO_CAB,
                  linha_convenio("800001/2018", "1001", "31/12/2026"),                      # vence em 47 dias -> VERMELHO
                  linha_convenio("800002/2021", "1002", "30/06/2027", desemb="0,00", ta="0", pro="0", saldo="0,00"),  # OK
+                 linha_convenio("800003/2019", "1003", "26/10/2026", sit="Aguardando Prestação de Contas", limite_pc="24/12/2026"),  # PC pendente
+                 linha_convenio("800004/2012", "1004", "30/12/2012", sit="Proposta/Plano de Trabalho Aprovado", assinado="NÃO"),   # nunca assinado
                  linha_convenio("700001/2020", "2001", "01/01/2027")],                     # outro município: fora
     "historico_situacao": [["ID_PROPOSTA", "NR_CONVENIO", "DIA_HISTORICO_SIT", "HISTORICO_SIT", "DIAS_HISTORICO_SIT", "COD_HISTORICO_SIT"],
                            ["1001", "800001/2018", "10/12/2018", "Assinado", "0", "1"],
@@ -133,15 +140,20 @@ def test_alerta_vigencia():
     assert tg.alerta_vigencia(0) == "VERMELHO"
     assert tg.alerta_vigencia(-1) == "VENCIDO"
     assert tg.alerta_vigencia(-500, "Prestação de Contas Aprovada") == "ENCERRADO"
+    assert tg.alerta_vigencia(-500, "Prestação de Contas em Análise") == "ENCERRADO"
+    assert tg.alerta_vigencia(-100, "Convênio Anulado") == "ENCERRADO"
+    assert tg.alerta_vigencia(-19, "Aguardando Prestação de Contas") == "PRESTAR CONTAS"     # não é encerrado: tem prazo correndo
+    assert tg.alerta_vigencia(-5433, "Proposta/Plano de Trabalho Aprovado", "NÃO") == "NÃO ASSINADO"
+    assert tg.alerta_vigencia(-5433, "", "NÃO") == "NÃO ASSINADO"
     assert tg.alerta_vigencia(None) == ""
 
 
 def test_filtra_so_o_municipio_e_junta_as_tabelas(ambiente):
     t, meta = rodar(ambiente)
-    assert sorted(t["proposta"]["ID_PROPOSTA"]) == ["1001", "1002"]
-    assert sorted(t["convenio"]["NR_CONVENIO"]) == ["800001/2018", "800002/2021"]
+    assert sorted(t["proposta"]["ID_PROPOSTA"]) == ["1001", "1002", "1003", "1004"]
+    assert sorted(t["convenio"]["NR_CONVENIO"]) == ["800001/2018", "800002/2021", "800003/2019", "800004/2012"]
     assert list(t["historico_situacao"]["NR_CONVENIO"].unique()) == ["800001/2018"]   # o de outro município ficou de fora
-    assert meta["tabelas"]["convenio"] == 2
+    assert meta["tabelas"]["convenio"] == 4
     assert "CEP_PROPONENTE" not in t["proposta"].columns                               # só as colunas escolhidas
 
 
@@ -161,7 +173,11 @@ def test_resumo_calcula_dias_alerta_percentual_e_ultimos(ambiente):
     assert a["ORGAO_SUPERIOR"] == "MINISTERIO EXEMPLO A" and a["OBJETO"] == "Pavimentação da Rua A"
     b = por["800002/2021"]
     assert b["ALERTA_VIGENCIA"] == "OK" and b["PCT_DESEMBOLSADO"] == 0.0 and b["ULTIMA_MEDICAO"] == ""
-    assert [l["NR_CONVENIO"] for l in r["instrumentos"]] == ["800001/2018", "800002/2021"]   # alerta mais grave primeiro
+    c = por["800003/2019"]
+    assert c["ALERTA_VIGENCIA"] == "PRESTAR CONTAS" and c["DIAS_PARA_PREST_CONTAS"] == 40
+    d = por["800004/2012"]
+    assert d["ALERTA_VIGENCIA"] == "NÃO ASSINADO" and d["ASSINADO"] == "NÃO"
+    assert [l["NR_CONVENIO"] for l in r["instrumentos"]] == ["800003/2019", "800001/2018", "800002/2021", "800004/2012"]   # PC pendente > vermelho > ok > não assinado
 
 
 def test_saidas_gravadas_e_markdown(ambiente):
@@ -171,8 +187,10 @@ def test_saidas_gravadas_e_markdown(ambiente):
         assert nome + ".csv" in arquivos
     assert {"resumo.json", "resumo.md", "_meta.json"} <= arquivos
     md = open(os.path.join(ambiente["saida"], "resumo.md"), encoding="utf-8").read()
-    assert "## Alertas de vigência (1)" in md
+    assert "## Alertas (2)" in md
     assert "**VERMELHO** · 800001/2018" in md
+    assert "**PRESTAR CONTAS** · 800003/2019" in md and "limite da PC 24/12/2026 (40 dias)" in md
+    assert "nunca assinadas (fora dos alertas): 800004/2012" in md
     assert "R$ 900.000,00" in md
     assert "carga de **14/11/2026**" in md
     assert "Sem IA" in md
@@ -182,7 +200,7 @@ def test_so_resumo_refaz_a_partir_dos_csvs(ambiente):
     rodar(ambiente)
     os.remove(os.path.join(ambiente["saida"], "resumo.md"))
     linhas = tg.so_resumo(ambiente["cfg"], hoje=HOJE, pasta=ambiente["saida"])
-    assert len(linhas) == 2 and os.path.exists(os.path.join(ambiente["saida"], "resumo.md"))
+    assert len(linhas) == 4 and os.path.exists(os.path.join(ambiente["saida"], "resumo.md"))
 
 
 def test_instrumento_extra_entra_pelo_numero(ambiente):
