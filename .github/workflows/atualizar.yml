@@ -1,0 +1,55 @@
+name: Atualizar convênios (Transferegov)
+
+on:
+  schedule:
+    # Transferegov publica a carga diária até ~9h (Brasília). 13:30 UTC = 10:30 Brasília.
+    - cron: "30 13 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-convenios
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-planilha.txt
+
+      - name: Baixar, filtrar e gerar resumo
+        run: python src/tg_convenios.py
+
+      - name: Enviar para a planilha (só se houver segredo)
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+          PLANILHA_ID: ${{ secrets.PLANILHA_ID }}
+        run: python src/planilha.py
+
+      - name: Commit da saída
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Sem mudanças nos dados."
+          else
+            git commit -m "dados: carga $(python -c "import json;print(json.load(open('data/_meta.json'))['data_carga'] or 'sem data')")"
+            git push
+          fi
+
+      - name: Publicar resumo no log da execução
+        run: cat data/resumo.md >> "$GITHUB_STEP_SUMMARY"
