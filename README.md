@@ -8,7 +8,9 @@ A saída é commitada no próprio repositório: **o histórico do git é o hist�
 
 ## Status
 
-Primeira versão. Os testes rodam sem internet com dados sintéticos no formato oficial; a primeira execução real acontece no GitHub Actions (o ambiente onde o código foi escrito não alcança o servidor do Transferegov). Os números em `data/` são os do último run.
+**Rodando.** Primeira execução real em 14/11/2026 (carga do Transferegov de 09/11): 63 instrumentos de Igarassu/PE, 189 propostas, 148 termos aditivos, 1.396 mudanças de situação, 11 medições de obra. Os números em `data/` são os do último run; `data/resumo.md` é o controle.
+
+O dado real corrigiu duas regras da primeira versão no mesmo dia: propostas aprovadas que nunca foram assinadas apareciam como "vencidas" (hoje são **NÃO ASSINADO**), e "Aguardando Prestação de Contas" era tratado como encerrado quando na verdade é um prazo correndo (hoje é **PRESTAR CONTAS**, com os dias até o limite).
 
 ## O problema
 
@@ -46,7 +48,7 @@ Decisões que importam:
 |---|---|
 | Órgão superior, órgão, modalidade, proponente, objeto | `proposta` |
 | Situação, subsituação, assinatura, vigência (atual e original), limite de prestação de contas | `convenio` |
-| `DIAS_PARA_FIM` e `ALERTA_VIGENCIA` | calculado: **AMARELO** a 90 dias do fim, **VERMELHO** a 60, **VENCIDO** depois; **ENCERRADO** quando a situação é de prestação de contas / concluído / cancelado |
+| `DIAS_PARA_FIM` e `ALERTA_VIGENCIA` | calculado: **AMARELO** a 90 dias do fim, **VERMELHO** a 60, **VENCIDO** depois (instrumento ainda em execução); **PRESTAR CONTAS** quando a situação é "Aguardando Prestação de Contas" (aí o prazo que vale é `DIAS_PARA_PREST_CONTAS`); **ENCERRADO** para PC em análise/concluída/aprovada/rejeitada, anulado, cancelado, rescindido; **NÃO ASSINADO** para proposta aprovada que nunca virou instrumento (`IND_ASSINADO = NÃO`) |
 | Valor global, repasse, contrapartida, empenhado, desembolsado, `PCT_DESEMBOLSADO`, saldo em conta | `convenio` |
 | `VL_BLOQUEADO_CR` (soma do que ainda está bloqueado) | `desbloqueio_cr` |
 | `QTD_TA`, `QTD_PRORROGA` | contagem em `termo_aditivo` / `prorroga_oficio` (cai para os campos do `convenio` se as tabelas vierem vazias) |
@@ -91,7 +93,8 @@ data/                      saída do último run (CSV por tabela, resumo.csv/jso
 
 ## Limitações (o que NÃO foi verificado)
 
-- O servidor do Transferegov **não foi acessado** durante o desenvolvimento; o formato dos CSVs seguiu o modelo de dados oficial e a listagem pública dos arquivos. Nomes de colunas são conferidos em tempo de execução; se algo vier diferente, o run falha com mensagem clara em vez de gravar lixo.
+- O código foi escrito sem acesso ao servidor do Transferegov e testado com dados sintéticos; a validação com dados reais é a execução no GitHub Actions. Nomes de colunas são conferidos em tempo de execução; se o modelo de dados mudar, o run falha com mensagem clara em vez de gravar lixo.
+- A situação no Transferegov pode estar atrás da realidade (um TA assinado ontem aparece na carga de amanhã) ou à frente do que o setor sabe. O resumo é para conferência, não para decisão automática.
 - `pagamento` (~370 MB) e `plano_aplicacao_detalhado` (~290 MB) não são baixados nesta versão.
 - Os dados do Transferegov são os registrados pelo concedente/mandatária; podem atrasar em relação ao que a Caixa comunica por CE.
 - Não lê anexos nem o Portal da Transparência.
