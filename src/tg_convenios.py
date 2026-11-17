@@ -23,6 +23,7 @@ import io
 import json
 import os
 import sys
+import re
 import zipfile
 
 import pandas as pd
@@ -53,6 +54,10 @@ TABELAS = {
     "cronograma_desembolso": {"chave": "NR_CONVENIO", "colunas": None},
     "acomp_obras_contratos_medicoes_modulo_empresas": {"chave": "ID_PROPOSTA", "colunas": None},
 }
+
+# Tabelas OPCIONAIS: o nome exato no Transferegov não foi confirmado. Se o download falhar (404 etc.),
+# o pipeline só avisa e segue. A chave é detectada pelo cabeçalho do CSV (ID_PROPOSTA ou NR_CONVENIO).
+TABELAS_OPCIONAIS = ["contrato", "licitacao"]
 
 # ---------------------------------------------------------------------------
 # Download
@@ -362,6 +367,31 @@ def resumo_markdown(linhas, meta):
     return "\n".join(t) + "\n"
 
 
+def catalogo_tabelas(sessao=None):
+    """Lista os zips publicados em BASE (lê os links da página de índice). Devolve lista de nomes; [] se falhar."""
+    try:
+        s = sessao or requests.Session()
+        r = s.get(BASE, timeout=60)
+        r.raise_for_status()
+        return sorted(set(re.findall(r"[A-Za-z0-9_]+\.zip", r.text)))
+    except Exception as e:
+        print("Aviso: não consegui listar o índice de", BASE, "->", e)
+        return []
+
+
+def filtrar_opcional(caminho_zip, ids_proposta, nrs):
+    """Filtra uma tabela cuja chave não é conhecida de antemão: usa ID_PROPOSTA se existir, senão NR_CONVENIO."""
+    with zipfile.ZipFile(caminho_zip) as z:
+        nome_csv = [n for n in z.namelist() if n.lower().endswith(".csv")][0]
+        with z.open(nome_csv) as f:
+            cab = next(csv.reader(io.TextIOWrapper(f, encoding="utf-8-sig"), delimiter=";"))
+    if "ID_PROPOSTA" in cab:
+        return filtrar_zip(caminho_zip, "ID_PROPOSTA", ids_proposta)
+    if "NR_CONVENIO" in cab:
+        return filtrar_zip(caminho_zip, "NR_CONVENIO", nrs)
+    raise RuntimeError("sem ID_PROPOSTA nem NR_CONVENIO; colunas: " + ", ".join(cab[:15]))
+
+
 # ---------------------------------------------------------------------------
 # Orquestração
 # ---------------------------------------------------------------------------
@@ -405,11 +435,25 @@ def executar(cfg, hoje=None, baixar_fn=baixar, pasta_saida=None, cache=None):
         t[nome] = filtrar_zip(baixar_fn(nome, os.path.join(cache, "siconv_" + nome + ".zip"), sessao), chave, valores, spec["colunas"])
         print("  linhas:", len(t[nome]))
 
+    for nome in TABELAS_OPCIONAIS:
+        print(nome + " (opcional): tentando baixar")
+        try:
+            zip_op = baixar_fn(nome, os.path.join(cache, "siconv_" + nome + ".zip"), sessao)
+            t[nome] = filtrar_opcional(zip_op, ids_proposta, nrs)
+            print("  linhas:", len(t[nome]), "| colunas:", ", ".join(t[nome].columns[:20]))
+        except Exception as e:
+            print("  AVISO: tabela opcional '" + nome + "' ignorada:", e)
+
     meta = {"gerado_em": dt.datetime.now(dt.timezone.utc).astimezone().isoformat(timespec="seconds"),
             "data_carga": data_carga(sessao), "cod_munic_ibge": str(cfg["cod_munic_ibge"]),
             "municipio_nome": cfg.get("municipio_nome", ""), "uf": cfg.get("uf", ""),
             "fonte": BASE, "licenca": "ODbL 1.0",
             "tabelas": {k: int(len(v)) for k, v in t.items()}}
+    nomes = catalogo_tabelas(sessao)
+    if nomes:
+        with open(os.path.join(pasta_saida, "catalogo_tabelas.txt"), "w", encoding="utf-8") as f:
+            f.write("\n".join(nomes) + "\n")
+        print("Catálogo do Transferegov:", len(nomes), "arquivos (data/catalogo_tabelas.txt)")
     gravar_saida(t, meta, hoje, pasta_saida)
     return t, meta
 

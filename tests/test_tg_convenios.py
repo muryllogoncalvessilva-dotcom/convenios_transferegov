@@ -119,6 +119,7 @@ def ambiente(tmp_path):
 def rodar(amb, **extra):
     cfg = dict(amb["cfg"], **extra)
     tg.data_carga = lambda sessao=None: "14/11/2026"   # sem internet
+    tg.catalogo_tabelas = lambda sessao=None: []
     return tg.executar(cfg, hoje=HOJE, baixar_fn=amb["baixar"], pasta_saida=amb["saida"], cache=amb["cache"])
 
 
@@ -229,3 +230,20 @@ def test_planilha_so_escreve_em_abas_tg():
     assert all(planilha.nome_aba(a).startswith("TG_") for a in planilha.ABAS)
     v = planilha.valores_para_planilha(pd.DataFrame({"a": ["1", None], "b": ["x", "y"]}))
     assert v == [["a", "b"], ["1", "x"], ["", "y"]]
+
+
+def test_tabela_opcional_ausente_nao_derruba(ambiente):
+    t, _ = rodar(ambiente)          # fixture não tem "contrato": só avisa
+    assert "contrato" not in t
+
+
+def test_tabela_opcional_contrato_e_filtrada_pelo_municipio(ambiente, tmp_path):
+    fonte = tmp_path / "fonte"
+    (fonte / "siconv_contrato.zip").write_bytes(zip_de([
+        ["ID_PROPOSTA", "NR_CONTRATO", "CNPJ"],
+        ["1001", "463/2021", "11"],
+        ["zzz", "999/2020", "22"],          # outro município: não entra
+    ], "siconv_contrato"))
+    t, _ = rodar(ambiente)
+    assert list(t["contrato"]["NR_CONTRATO"]) == ["463/2021"]
+    assert os.path.exists(os.path.join(ambiente["saida"], "contrato.csv"))
