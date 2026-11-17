@@ -19,7 +19,7 @@ import pandas as pd
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PASTA_DADOS = os.path.join(RAIZ, "data")
 ABAS = ["resumo", "convenio", "proposta", "historico_situacao", "termo_aditivo", "prorroga_oficio",
-        "desbloqueio_cr", "desembolso", "empenho", "cronograma_desembolso", "acomp_obras_contratos_medicoes_modulo_empresas"]
+        "desbloqueio_cr", "desembolso", "empenho", "cronograma_desembolso", "acomp_obras_contratos_medicoes_modulo_empresas", "licitacao", "contrato"]
 NOME_ABA = {"acomp_obras_contratos_medicoes_modulo_empresas": "TG_MEDICOES"}
 
 
