@@ -237,13 +237,20 @@ def test_tabela_opcional_ausente_nao_derruba(ambiente):
     assert "contrato" not in t
 
 
-def test_tabela_opcional_contrato_e_filtrada_pelo_municipio(ambiente, tmp_path):
+def test_contrato_liga_ao_instrumento_pela_licitacao(ambiente, tmp_path):
     fonte = tmp_path / "fonte"
+    (fonte / "siconv_licitacao.zip").write_bytes(zip_de([
+        ["ID_LICITACAO", "NR_CONVENIO", "NR_LICITACAO", "NR_PROCESSO_LICITACAO", "MODALIDADE_LICITACAO"],
+        ["L1", "800001/2018", "013", "009", "Concorrência"],
+        ["L9", "700001/2020", "01", "01", "Pregão"],          # outro município: não entra
+    ], "siconv_licitacao"))
     (fonte / "siconv_contrato.zip").write_bytes(zip_de([
-        ["ID_PROPOSTA", "NR_CONTRATO", "CNPJ"],
-        ["1001", "463/2021", "11"],
-        ["zzz", "999/2020", "22"],          # outro município: não entra
+        ["ID_LICITACAO", "ID_CONTRATO", "NR_CONTRATO", "DATA_ASSINATURA_CONTRATO"],
+        ["L1", "C1", "420/2025", "13/11/2025"],
+        ["L9", "C9", "999/2020", "01/01/2020"],
     ], "siconv_contrato"))
     t, _ = rodar(ambiente)
-    assert list(t["contrato"]["NR_CONTRATO"]) == ["463/2021"]
+    c = t["contrato"]
+    assert list(c["NR_CONTRATO"]) == ["420/2025"]
+    assert c.columns[0] == "NR_CONVENIO" and list(c["NR_CONVENIO"]) == ["800001/2018"]
     assert os.path.exists(os.path.join(ambiente["saida"], "contrato.csv"))

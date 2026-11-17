@@ -57,7 +57,7 @@ TABELAS = {
 
 # Tabelas OPCIONAIS: o nome exato no Transferegov não foi confirmado. Se o download falhar (404 etc.),
 # o pipeline só avisa e segue. A chave é detectada pelo cabeçalho do CSV (ID_PROPOSTA ou NR_CONVENIO).
-TABELAS_OPCIONAIS = ["contrato", "licitacao"]
+TABELAS_OPCIONAIS = ["licitacao", "contrato"]   # contrato depende de licitacao (liga por ID_LICITACAO)
 
 # ---------------------------------------------------------------------------
 # Download
@@ -379,8 +379,9 @@ def catalogo_tabelas(sessao=None):
         return []
 
 
-def filtrar_opcional(caminho_zip, ids_proposta, nrs):
-    """Filtra uma tabela cuja chave não é conhecida de antemão: usa ID_PROPOSTA se existir, senão NR_CONVENIO."""
+def filtrar_opcional(caminho_zip, ids_proposta, nrs, ids_licitacao=None):
+    """Filtra uma tabela cuja chave não é conhecida de antemão: ID_PROPOSTA, senão NR_CONVENIO, senão ID_LICITACAO
+    (caso de siconv_contrato, que só se liga ao instrumento pela licitação)."""
     with zipfile.ZipFile(caminho_zip) as z:
         nome_csv = [n for n in z.namelist() if n.lower().endswith(".csv")][0]
         with z.open(nome_csv) as f:
@@ -389,7 +390,9 @@ def filtrar_opcional(caminho_zip, ids_proposta, nrs):
         return filtrar_zip(caminho_zip, "ID_PROPOSTA", ids_proposta)
     if "NR_CONVENIO" in cab:
         return filtrar_zip(caminho_zip, "NR_CONVENIO", nrs)
-    raise RuntimeError("sem ID_PROPOSTA nem NR_CONVENIO; colunas: " + ", ".join(cab[:15]))
+    if "ID_LICITACAO" in cab and ids_licitacao is not None:
+        return filtrar_zip(caminho_zip, "ID_LICITACAO", ids_licitacao)
+    raise RuntimeError("sem ID_PROPOSTA, NR_CONVENIO nem ID_LICITACAO utilizável; colunas: " + ", ".join(cab[:15]))
 
 
 # ---------------------------------------------------------------------------
@@ -439,7 +442,13 @@ def executar(cfg, hoje=None, baixar_fn=baixar, pasta_saida=None, cache=None):
         print(nome + " (opcional): tentando baixar")
         try:
             zip_op = baixar_fn(nome, os.path.join(cache, "siconv_" + nome + ".zip"), sessao)
-            t[nome] = filtrar_opcional(zip_op, ids_proposta, nrs)
+            ids_lic = set(t["licitacao"]["ID_LICITACAO"].str.strip()) if "licitacao" in t and "ID_LICITACAO" in t["licitacao"].columns else None
+            t[nome] = filtrar_opcional(zip_op, ids_proposta, nrs, ids_lic)
+            if nome == "contrato" and "licitacao" in t and "ID_LICITACAO" in t[nome].columns and len(t[nome]):
+                elo = t["licitacao"][["ID_LICITACAO", "NR_CONVENIO", "NR_LICITACAO", "NR_PROCESSO_LICITACAO", "MODALIDADE_LICITACAO"]].drop_duplicates("ID_LICITACAO")
+                t[nome] = t[nome].merge(elo, on="ID_LICITACAO", how="left")
+                cols = ["NR_CONVENIO"] + [c for c in t[nome].columns if c != "NR_CONVENIO"]
+                t[nome] = t[nome][cols].sort_values(["NR_CONVENIO", "DATA_ASSINATURA_CONTRATO"] if "DATA_ASSINATURA_CONTRATO" in t[nome].columns else ["NR_CONVENIO"])
             print("  linhas:", len(t[nome]), "| colunas:", ", ".join(t[nome].columns[:20]))
         except Exception as e:
             print("  AVISO: tabela opcional '" + nome + "' ignorada:", e)
