@@ -1,6 +1,6 @@
 {
  "meta": {
-  "gerado_em": "2026-11-17T13:31:58+00:00",
+  "gerado_em": "2026-11-17T13:57:45+00:00",
   "data_carga": "17/11/2026 06:42:40",
   "cod_munic_ibge": "2606804",
   "municipio_nome": "IGARASSU",
@@ -18,7 +18,8 @@
    "empenho": 110,
    "cronograma_desembolso": 387,
    "acomp_obras_contratos_medicoes_modulo_empresas": 11,
-   "licitacao": 133
+   "licitacao": 133,
+   "contrato": 102
   }
  },
  "instrumentos": [
