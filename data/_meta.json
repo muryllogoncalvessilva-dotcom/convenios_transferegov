@@ -1,6 +1,6 @@
 {
- "gerado_em": "2026-11-16T22:58:19+00:00",
- "data_carga": "09/11/2026 06:34:43",
+ "gerado_em": "2026-11-17T13:31:58+00:00",
+ "data_carga": "17/11/2026 06:42:40",
  "cod_munic_ibge": "2606804",
  "municipio_nome": "IGARASSU",
  "uf": "PE",
@@ -9,13 +9,14 @@
  "tabelas": {
   "proposta": 189,
   "convenio": 63,
-  "historico_situacao": 1396,
-  "termo_aditivo": 148,
+  "historico_situacao": 1398,
+  "termo_aditivo": 150,
   "prorroga_oficio": 24,
   "desbloqueio_cr": 293,
   "desembolso": 120,
   "empenho": 110,
-  "cronograma_desembolso": 386,
-  "acomp_obras_contratos_medicoes_modulo_empresas": 11
+  "cronograma_desembolso": 387,
+  "acomp_obras_contratos_medicoes_modulo_empresas": 11,
+  "licitacao": 133
  }
 }
