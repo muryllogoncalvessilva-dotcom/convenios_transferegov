@@ -48,6 +48,7 @@ jobs:
             echo "Sem mudanças nos dados."
           else
             git commit -m "dados: carga $(python -c "import json;print(json.load(open('data/_meta.json'))['data_carga'] or 'sem data')")"
+            git pull --rebase origin main
             git push
           fi
 
