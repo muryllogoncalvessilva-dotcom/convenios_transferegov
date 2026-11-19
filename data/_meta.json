@@ -1,13 +1,13 @@
 {
- "gerado_em": "2026-11-18T21:30:39+00:00",
- "data_carga": "18/11/2026 06:42:25",
+ "gerado_em": "2026-11-19T21:42:51+00:00",
+ "data_carga": "19/11/2026 06:39:31",
  "cod_munic_ibge": "2606804",
  "municipio_nome": "IGARASSU",
  "uf": "PE",
  "fonte": "https://api-publica.transferegov.gestao.gov.br/downloads/dadosgov/",
  "licenca": "ODbL 1.0",
  "tabelas": {
-  "proposta": 189,
+  "proposta": 192,
   "convenio": 63,
   "historico_situacao": 1401,
   "termo_aditivo": 150,
