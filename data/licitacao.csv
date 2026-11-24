@@ -1,137 +1,137 @@
 ﻿ID_LICITACAO;NR_CONVENIO;NR_LICITACAO;MODALIDADE_LICITACAO;TP_PROCESSO_COMPRA;TIPO_LICITACAO;NR_PROCESSO_LICITACAO;DATA_PUBLICACAO_LICITACAO;DATA_ABERTURA_LICITACAO;DATA_ENCERRAMENTO_LICITACAO;DATA_HOMOLOGACAO_LICITACAO;STATUS_LICITACAO;SITUACAO_ACEITE_PROCESSO_EXECU;SISTEMA_ORIGEM;SITUACAO_SISTEMA;VALOR_LICITACAO;DATA_ANALISE_ACEITE;DATA_ENVIO_ANALISE
-763913;906685;98/2021;Pregão;Licitação;Menor Preço;006/2021.;18/05/2021;18/05/2021;;10/06/2021;CONCLUIDO;;Sistema Externo;CONCLUIDA;118480;;
 1181981;997143;204;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3500;;
-1190078;997143;206;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-203355;723744;05;Tomada de Preços;Licitação;Técnica e Preço;1402011;26/07/2011;24/08/2011;15/09/2011;30/09/2011;CONCLUIDO;;Plataforma +Brasil;;190800;;
-412256;798085;022015;Tomada de Preços;Licitação;Menor Preço;0562015;05/03/2015;20/03/2015;;30/04/2015;CONCLUIDO;;Plataforma +Brasil;;1163092,14;;
+763913;906685;98/2021;Pregão;Licitação;Menor Preço;006/2021.;18/05/2021;18/05/2021;;10/06/2021;CONCLUIDO;;Sistema Externo;CONCLUIDA;118480;;
+203355;723744;5;Tomada de Preços;Licitação;Técnica e Preço;1402011;26/07/2011;24/08/2011;15/09/2011;30/09/2011;CONCLUIDO;;Plataforma +Brasil;;190800;;
 729631;868307;0022020;Tomada de Preços;Licitação;Menor Preço;0000142020;12/05/2020;27/05/2020;;20/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;372678,7;10/08/2020;04/08/2020
-1189441;997143;207;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1200;;
-1240477;997143;00602;;Cotação Prévia de Preços;;00602;;;;;CONCLUIDO;;Plataforma +Brasil;;1500;;
-1060709;962675;06;Concorrência;Licitação;Menor Preço;006;27/06/2025;01/07/2025;15/07/2025;25/07/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;2500000;20/10/2025;16/10/2025
-1202605;997143;22002;;Cotação Prévia de Preços;;22002;;;;22/05/2026;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1190075;997143;0211;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1200;;
-203731;723744;036;Pregão;Licitação;Presencial por Maior Desconto;1532011;28/07/2011;11/08/2011;11/08/2011;18/08/2011;CONCLUIDO;;Plataforma +Brasil;;76586;;
+1190078;997143;206;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
 1207192;997143;2204;;Cotação Prévia de Preços;;2204;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1155675;868305;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;350900;16/06/2026;07/05/2026
-868310;905543;032022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;1083,6;;
-597936;850500;082018;Pregão;Licitação;Presencial;001022018;09/03/2018;27/03/2018;05/04/2018;05/04/2018;CONCLUIDO;;Plataforma +Brasil;;575248,25;;
-942915;952866;004/2024;Pregão;Licitação;Eletrônico;062024;28/03/2024;11/04/2024;11/04/2024;18/04/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;843950;25/04/2024;23/04/2024
+1240477;997143;00602;;Cotação Prévia de Preços;;00602;;;;;CONCLUIDO;;Plataforma +Brasil;;1500;;
 1181968;997143;0503;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
+1060709;962675;006;Concorrência;Licitação;Menor Preço;006;27/06/2025;01/07/2025;15/07/2025;25/07/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;2500000;20/10/2025;16/10/2025
+1081630;868305;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;350900;13/04/2026;21/10/2025
+412256;798085;22015;Tomada de Preços;Licitação;Menor Preço;0562015;05/03/2015;20/03/2015;;30/04/2015;CONCLUIDO;;Plataforma +Brasil;;1163092,14;;
+1155675;868305;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;350900;16/06/2026;07/05/2026
+1190075;997143;211;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1200;;
+868310;905543;0032022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;1083,6;;
+942915;952866;004/2024;Pregão;Licitação;Eletrônico;0062024;28/03/2024;11/04/2024;11/04/2024;18/04/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;843950;25/04/2024;23/04/2024
+203731;723744;36;Pregão;Licitação;Presencial por Maior Desconto;1532011;28/07/2011;11/08/2011;11/08/2011;18/08/2011;CONCLUIDO;;Plataforma +Brasil;;76586;;
+1202605;997143;22002;;Cotação Prévia de Preços;;22002;;;;22/05/2026;CONCLUIDO;;Plataforma +Brasil;;2500;;
+597936;850500;082018;Pregão;Licitação;Presencial;1022018;09/03/2018;27/03/2018;05/04/2018;05/04/2018;CONCLUIDO;;Plataforma +Brasil;;575248,25;;
+452444;802347;22015;Concorrência;Licitação;Menor Preço;0942015;08/05/2015;16/09/2015;06/06/2015;18/06/2015;CONCLUIDO;;Plataforma +Brasil;;1749022,81;;
+1189441;997143;207;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1200;;
 799042;897738;0512021;Pregão;Licitação;Eletrônico;0262021;22/10/2021;10/11/2021;;26/11/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;1430000;07/06/2022;11/02/2022
-1190675;997143;104;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2800;;
-822862;909069;122021;Tomada de Preços;Licitação;Menor Preço;412021;02/12/2021;23/12/2021;18/02/2022;18/02/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1694975,1;30/06/2022;30/06/2022
-1081630;868305;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;350900;13/04/2026;21/10/2025
-1215575;997143;206;;Cotação Prévia de Preços;;206;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-795264;888442;0022021;Tomada de Preços;Licitação;Menor Preço;0122021;11/05/2021;27/05/2021;21/09/2021;21/09/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;410422,1;30/06/2022;30/06/2022
-1190671;997143;110;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2250;;
-452444;802347;022015;Concorrência;Licitação;Menor Preço;0942015;08/05/2015;16/09/2015;06/06/2015;18/06/2015;CONCLUIDO;;Plataforma +Brasil;;1749022,81;;
-806955;868305;082021;Tomada de Preços;Licitação;Menor Preço;0362021;22/11/2021;09/12/2021;;14/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;729567,39;27/10/2022;23/02/2022
-210184;723744;2;Convite;Licitação;Menor Valor;0172012;12/05/2012;18/05/2012;18/05/2012;21/05/2012;CONCLUIDO;;Plataforma +Brasil;;21405;;
-203894;723744;35;Pregão;Licitação;Presencial por Maior Desconto;001522011;04/10/2011;24/10/2011;24/10/2011;25/10/2011;CONCLUIDO;;Plataforma +Brasil;;38059,2;;
-806908;868301;092021;Tomada de Preços;Licitação;Menor Preço;0372021;21/09/2021;08/12/2021;;20/12/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;698651,18;26/04/2022;18/02/2022
 1189433;997143;02101;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-210424;723744;001;Convite;Licitação;Menor Valor;016 2012;12/05/2012;18/05/2012;;21/05/2012;CONCLUIDO;;Plataforma +Brasil;;67000;;
 1184129;997143;221;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;720;;
-1184115;997143;0225;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;720;;
-1240467;997143;0601;;Cotação Prévia de Preços;;601;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
-1240353;997143;216;;Cotação Prévia de Preços;;216;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
-729835;868496;001;Tomada de Preços;Licitação;Menor Preço;012;12/05/2020;25/05/2020;22/05/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;587901,31;11/08/2020;04/08/2020
-1211080;997143;2208;;Cotação Prévia de Preços;;2208;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1101859;908393;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;847299;21/10/2026;21/10/2026
-811959;802347;012021;Concorrência;Licitação;Menor Preço;142021;14/06/2021;15/02/2021;;14/09/2021;CONCLUIDO;;Plataforma +Brasil;;1991434,81;;
-688587;844981;;;;;;;;;15/05/2019;CONCLUIDO;Rejeitado;Plataforma +Brasil;;707662,56;05/02/2020;05/02/2020
-1193173;997143;106;;Cotação Prévia de Preços;;106;;;;;CONCLUIDO;;Plataforma +Brasil;;12000;;
-591783;829102;012017;Concorrência;Licitação;Menor Preço;127 2017;27/07/2017;28/08/2017;25/04/2018;25/04/2018;CONCLUIDO;;Plataforma +Brasil;;586153,96;;
-592149;830471;012018;Tomada de Preços;Licitação;Menor Preço;1002018;09/03/2018;02/04/2018;;20/04/2018;CONCLUIDO;;Plataforma +Brasil;;240720,29;;
-863186;905543;012022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;440,1;;
-1081652;908393;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;847299;05/12/2025;31/10/2025
-833586;909493;0132021;Tomada de Preços;Licitação;Menor Preço;0422021;02/12/2021;17/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;519889,35;29/06/2022;27/06/2022
-1177438;973269;007;Concorrência;Licitação;Menor Preço;009;25/05/2026;10/06/2026;18/06/2026;18/06/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1309900;06/07/2026;29/06/2026
-900476;917818;0022023;Tomada de Preços;Licitação;Menor Preço;022023;16/02/2023;07/03/2023;;28/04/2023;CONCLUIDO;Aceito;Plataforma +Brasil;;951363,61;01/03/2024;19/10/2023
-797594;905543;001;;Cotação Prévia de Preços;;;;;;23/12/2021;CONCLUIDO;;Plataforma +Brasil;;64994;;
-1100912;959992;13;Concorrência;Licitação;Menor Preço;019;03/10/2025;20/10/2025;19/11/2025;19/11/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;1000000;15/12/2025;11/12/2025
-123809;718166;832010;Convite;Licitação;Menor Valor;2092010;;;;;CONCLUIDO;;Plataforma +Brasil;;56691,3;;
-1050071;955717;008/2025;Pregão;Licitação;Eletrônico;16;09/04/2025;10/04/2025;24/04/2025;19/05/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;540000;01/08/2025;15/07/2025
-1190083;997143;205;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
-1190698;997143;2201;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1184119;997143;0226;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;900;;
-583699;826491;0022017;Tomada de Preços;Licitação;Menor Preço;1192017;05/07/2017;20/07/2017;13/11/2017;13/11/2017;CONCLUIDO;;Plataforma +Brasil;;492990,74;;
-1159063;963049;1205/2026;Concorrência;Licitação;Menor Preço;006/2026;12/05/2026;13/05/2026;;05/06/2026;CONCLUIDO;;Sistema Externo;CONCLUIDA;1359000;;
-419303;786738;0012015;Concorrência;Licitação;Menor Preço;622015;19/03/2015;21/04/2015;05/05/2015;03/06/2015;CONCLUIDO;;Plataforma +Brasil;;1315277,55;;
-698050;802348;032019;Tomada de Preços;Licitação;Menor Preço;552019;23/09/2019;10/10/2019;22/10/2019;22/10/2019;CONCLUIDO;;Plataforma +Brasil;;863368,71;;
-1190673;997143;108;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
-203307;723744;26;Pregão;Licitação;Presencial por Maior Desconto;1042011;20/04/2012;30/04/2012;;16/05/2012;CONCLUIDO;;Plataforma +Brasil;;20420;;
-640816;834546;0022018;Tomada de Preços;Licitação;Menor Preço;1352018;27/04/2018;16/05/2018;02/10/2018;02/10/2018;CONCLUIDO;;Plataforma +Brasil;;274304,5;;
-814512;905543;001/2021;;Inexigibilidade;;2021;20/09/2021;;;24/09/2021;CONCLUIDO;;Plataforma +Brasil;;36000;;
-1191055;997143;02202;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1181883;997143;0501;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;10000;;
-870319;905543;022022;;Inexigibilidade;;0012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
-450863;802348;000062015;Tomada de Preços;Licitação;Menor Preço;932015;08/05/2015;27/05/2015;;01/06/2015;CONCLUIDO;;Plataforma +Brasil;;1287022,66;;
-1193207;997143;0107;;Cotação Prévia de Preços;;0107;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
-729738;868003;0012020;Tomada de Preços;Licitação;Menor Preço;122020;12/05/2020;25/05/2020;22/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;205145,12;12/08/2020;04/08/2020
-862861;905543;022022;;Inexigibilidade;;022022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
-157986;723744;034;Pregão;Licitação;Presencial por Maior Desconto;1452011;27/07/2011;05/08/2011;19/10/2011;26/10/2011;CONCLUIDO;;Plataforma +Brasil;;144200;;
-1124766;964973;23;Concorrência;Licitação;Menor Preço;17;15/12/2025;29/12/2025;13/01/2026;13/01/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1349900;02/03/2026;27/02/2026
-797601;905543;2;;Cotação Prévia de Preços;;;;;;23/12/2021;CONCLUIDO;;Plataforma +Brasil;;39508,74;;
-1207101;997143;222;;Cotação Prévia de Preços;;222;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
-1190076;997143;000210;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-950386;955717;005/2024;Pregão;Licitação;Eletrônico;007;27/05/2024;10/06/2024;10/06/2024;07/08/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;779775,68;10/01/2025;08/01/2025
-1189439;997143;208;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
-805775;908393;007/2021;Tomada de Preços;Licitação;Menor Preço;0342021;22/11/2021;07/12/2021;;06/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1404587,94;29/06/2022;28/06/2022
-1189369;997143;402;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
-420231;784198;0032015;Tomada de Preços;Licitação;Menor Preço;812015;;27/04/2015;03/06/2015;03/06/2015;CONCLUIDO;;Plataforma +Brasil;;652851,46;;
-1190046;997143;0219;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;480;;
-729596;868301;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;27/07/2020;27/07/2020;CONCLUIDO;Rejeitado;Plataforma +Brasil;;534316,36;07/08/2020;04/08/2020
-1169746;963049;007;Concorrência;Licitação;Menor Preço;007;12/05/2026;27/05/2026;27/05/2026;05/06/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1359000;08/09/2026;19/08/2026
-795486;891467;0232021;Concorrência;Licitação;Menor Preço;0022021;20/07/2021;19/09/2021;;27/09/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;1248080,72;10/05/2022;10/12/2021
-759689;906685;86/2021;Pregão;Licitação;Menor Preço;003/2021.;19/04/2021;19/04/2021;;;EM_ELABORACAO;;Sistema Externo;EM_ANDAMENTO;116056;;
-1076264;955717;18;Pregão;Licitação;Eletrônico;037;07/08/2025;07/08/2025;22/08/2025;22/08/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;48120;15/10/2025;01/10/2025
-1211081;997143;002 209;;Cotação Prévia de Preços;;2209;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1189370;997143;405;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
-515221;805857;0042016;Tomada de Preços;Licitação;Menor Preço;1732016;12/08/2016;31/08/2016;13/09/2016;13/09/2016;CONCLUIDO;;Plataforma +Brasil;;1433579,85;;
-1189366;997143;404;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
-1207173;997143;223;;Cotação Prévia de Preços;;223;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-772370;906685;00062021;Pregão;Licitação;Eletrônico;0182021;18/05/2021;31/05/2021;10/06/2021;10/06/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;118536;19/08/2021;19/07/2021
-123812;718166;0872010;Convite;Licitação;Menor Valor;2182010;;28/07/2010;;;CONCLUIDO;;Plataforma +Brasil;;29650;;
-1213906;997143;0002210;;Cotação Prévia de Preços;;2210;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1207126;997143;224;;Cotação Prévia de Preços;;224;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
-1163293;962228;002/2026;;Dispensa de Licitação;;008;;;;15/05/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;88470;29/06/2026;01/06/2026
-1190074;997143;209;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
-1207198;997143;2205;;Cotação Prévia de Preços;;2205;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-555285;821414;012017;Tomada de Preços;Licitação;Menor Preço;0072017;06/02/2016;21/02/2017;;05/04/2017;CONCLUIDO;;Plataforma +Brasil;;267454,29;;
-1190684;997143;0109;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-1094214;963049;15;Concorrência;Licitação;Menor Preço;021;17/11/2025;02/12/2025;10/12/2025;11/12/2025;EM_ELABORACAO;;Plataforma +Brasil;;1681653,5;;
-808624;909493;0132021;Tomada de Preços;Licitação;Menor Preço;0422021;02/12/2021;17/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Rejeitado;Plataforma +Brasil;;519888,46;17/06/2022;18/05/2022
-1190669;997143;111;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1120;;
-1202698;997143;0101;;Cotação Prévia de Preços;;101;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-867120;905543;0042022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;2195,49;;
-875431;905543;022022;;Inexigibilidade;;0012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
-123813;718166;0332011;;Dispensa de Licitação;;0762011;;;;;CONCLUIDO;;Plataforma +Brasil;;7600;;
-123818;718166;132010;Pregão;Licitação;Presencial;2252010;;;;;CONCLUIDO;;Plataforma +Brasil;;154212;;
-863187;905543;022022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;1828,45;;
-900305;913903;0082023;Tomada de Preços;Licitação;Menor Preço;00082023;13/02/2023;01/03/2023;;28/04/2023;CONCLUIDO;Aceito;Plataforma +Brasil;;423717,78;09/11/2023;09/11/2023
-753021;906685;73/2021;Pregão;Licitação;Menor Preço;001/2021.;22/02/2021;22/02/2021;;;EM_ELABORACAO;;Sistema Externo;EM_ANDAMENTO;0;;
-822871;909069;0142021;Tomada de Preços;Licitação;Menor Preço;00432021;02/12/2021;20/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1658290,17;30/06/2022;06/05/2022
-1155546;868301;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;688500;16/06/2026;07/05/2026
+729835;868496;01;Tomada de Preços;Licitação;Menor Preço;12;12/05/2020;25/05/2020;22/05/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;587901,31;11/08/2020;04/08/2020
+1240467;997143;00601;;Cotação Prévia de Preços;;00601;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
+795264;888442;0022021;Tomada de Preços;Licitação;Menor Preço;122021;11/05/2021;27/05/2021;21/09/2021;21/09/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;410422,1;30/06/2022;30/06/2022
+1190671;997143;110;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2250;;
 808103;909493;112021;Tomada de Preços;Licitação;Menor Preço;0402021;01/01/2021;21/12/2021;;14/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;833787,3;29/06/2022;23/03/2022
-956135;929071;10;Concorrência;Licitação;Menor Preço;10;20/05/2024;05/06/2024;;20/06/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;6500415,14;03/07/2024;03/07/2024
-1230852;997143;0022020;;Cotação Prévia de Preços;;022020;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1204009;997143;215;;Cotação Prévia de Preços;;215;;;;;CONCLUIDO;;Plataforma +Brasil;;1600;;
-1193161;997143;102;;Cotação Prévia de Preços;;102;;;;;CONCLUIDO;;Plataforma +Brasil;;8000;;
-702824;844981;0012019;Tomada de Preços;Licitação;Menor Preço;00162019;25/04/2019;13/05/2019;15/05/2019;15/05/2019;CONCLUIDO;Aceito;Plataforma +Brasil;;652127,17;05/02/2020;05/02/2020
-1081616;868301;13;Concorrência;Licitação;Menor Preço;009;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;688500;10/04/2026;16/12/2025
-1207137;997143;206;;Cotação Prévia de Preços;;206;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
-1181963;997143;502;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
-1183079;997143;504;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;4000;;
-729658;868305;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;27/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;543316,36;10/08/2020;04/08/2020
-1190683;997143;0109;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3400;;
-1189367;997143;0401;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
-730537;868301;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;22/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;559613,73;10/08/2020;07/08/2020
-1193248;962667;007;Concorrência;Licitação;Menor Preço;007;27/06/2025;01/07/2025;15/07/2025;25/07/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;8182840;19/08/2026;05/08/2026
+806908;868301;092021;Tomada de Preços;Licitação;Menor Preço;372021;21/09/2021;08/12/2021;;20/12/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;698651,18;26/04/2022;18/02/2022
+203894;723744;35;Pregão;Licitação;Presencial por Maior Desconto;001522011;04/10/2011;24/10/2011;24/10/2011;25/10/2011;CONCLUIDO;;Plataforma +Brasil;;38059,2;;
 803340;891768;24 2021;Tomada de Preços;Licitação;Menor Preço;52021;06/08/2021;23/08/2021;09/11/2021;09/11/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;490770,15;10/06/2022;18/01/2022
-869758;905543;022022;;Inexigibilidade;;0012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
-1190043;997143;0105;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3400;;
+583699;826491;022017;Tomada de Preços;Licitação;Menor Preço;1192017;05/07/2017;20/07/2017;13/11/2017;13/11/2017;CONCLUIDO;;Plataforma +Brasil;;492990,74;;
+698050;802348;032019;Tomada de Preços;Licitação;Menor Preço;0552019;23/09/2019;10/10/2019;22/10/2019;22/10/2019;CONCLUIDO;;Plataforma +Brasil;;863368,71;;
+1184115;997143;225;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;720;;
+1190673;997143;108;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
+1050071;955717;008/2025;Pregão;Licitação;Eletrônico;16;09/04/2025;10/04/2025;24/04/2025;19/05/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;540000;01/08/2025;15/07/2025
+1193207;997143;0107;;Cotação Prévia de Preços;;0107;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
+1159063;963049;1205/2026;Concorrência;Licitação;Menor Preço;006/2026;12/05/2026;13/05/2026;;05/06/2026;CONCLUIDO;;Sistema Externo;CONCLUIDA;1359000;;
+1190076;997143;0210;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
+1193173;997143;106;;Cotação Prévia de Preços;;106;;;;;CONCLUIDO;;Plataforma +Brasil;;12000;;
+210424;723744;01;Convite;Licitação;Menor Valor;162012;12/05/2012;18/05/2012;;21/05/2012;CONCLUIDO;;Plataforma +Brasil;;67000;;
+797601;905543;02;;Cotação Prévia de Preços;;;;;;23/12/2021;CONCLUIDO;;Plataforma +Brasil;;39508,74;;
+157986;723744;034;Pregão;Licitação;Presencial por Maior Desconto;1452011;27/07/2011;05/08/2011;19/10/2011;26/10/2011;CONCLUIDO;;Plataforma +Brasil;;144200;;
+1190675;997143;104;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2800;;
+1177438;973269;07;Concorrência;Licitação;Menor Preço;09;25/05/2026;10/06/2026;18/06/2026;18/06/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1309900;06/07/2026;29/06/2026
+805775;908393;007/2021;Tomada de Preços;Licitação;Menor Preço;342021;22/11/2021;07/12/2021;;06/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1404587,94;29/06/2022;28/06/2022
+833586;909493;0132021;Tomada de Preços;Licitação;Menor Preço;0422021;02/12/2021;17/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;519889,35;29/06/2022;27/06/2022
+822862;909069;122021;Tomada de Preços;Licitação;Menor Preço;412021;02/12/2021;23/12/2021;18/02/2022;18/02/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1694975,1;30/06/2022;30/06/2022
+1081652;908393;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;847299;05/12/2025;31/10/2025
+1207173;997143;223;;Cotação Prévia de Preços;;223;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
+1240353;997143;216;;Cotação Prévia de Preços;;216;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
+1215575;997143;206;;Cotação Prévia de Preços;;206;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
+759689;906685;86/2021;Pregão;Licitação;Menor Preço;003/2021.;19/04/2021;19/04/2021;;;EM_ELABORACAO;;Sistema Externo;EM_ANDAMENTO;116056;;
+1211080;997143;2208;;Cotação Prévia de Preços;;2208;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+210184;723744;02;Convite;Licitação;Menor Valor;0172012;12/05/2012;18/05/2012;18/05/2012;21/05/2012;CONCLUIDO;;Plataforma +Brasil;;21405;;
+688587;844981;;;;;;;;;15/05/2019;CONCLUIDO;Rejeitado;Plataforma +Brasil;;707662,56;05/02/2020;05/02/2020
+591783;829102;0012017;Concorrência;Licitação;Menor Preço;127 2017;27/07/2017;28/08/2017;25/04/2018;25/04/2018;CONCLUIDO;;Plataforma +Brasil;;586153,96;;
+797594;905543;01;;Cotação Prévia de Preços;;;;;;23/12/2021;CONCLUIDO;;Plataforma +Brasil;;64994;;
+814512;905543;001/2021;;Inexigibilidade;;2021;20/09/2021;;;24/09/2021;CONCLUIDO;;Plataforma +Brasil;;36000;;
+1181883;997143;0501;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;10000;;
+123809;718166;832010;Convite;Licitação;Menor Valor;2092010;;;;;CONCLUIDO;;Plataforma +Brasil;;56691,3;;
+1190698;997143;2201;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+875431;905543;0022022;;Inexigibilidade;;012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
+863187;905543;0022022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;1828,45;;
+1184119;997143;0226;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;900;;
+419303;786738;0012015;Concorrência;Licitação;Menor Preço;622015;19/03/2015;21/04/2015;05/05/2015;03/06/2015;CONCLUIDO;;Plataforma +Brasil;;1315277,55;;
+806955;868305;82021;Tomada de Preços;Licitação;Menor Preço;0362021;22/11/2021;09/12/2021;;14/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;729567,39;27/10/2022;23/02/2022
+1190083;997143;205;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
+822871;909069;0142021;Tomada de Preços;Licitação;Menor Preço;0432021;02/12/2021;20/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Aceito;Plataforma +Brasil;;1658290,17;30/06/2022;06/05/2022
+640816;834546;0022018;Tomada de Preços;Licitação;Menor Preço;1352018;27/04/2018;16/05/2018;02/10/2018;02/10/2018;CONCLUIDO;;Plataforma +Brasil;;274304,5;;
+203307;723744;026;Pregão;Licitação;Presencial por Maior Desconto;1042011;20/04/2012;30/04/2012;;16/05/2012;CONCLUIDO;;Plataforma +Brasil;;20420;;
+900305;913903;0082023;Tomada de Preços;Licitação;Menor Preço;082023;13/02/2023;01/03/2023;;28/04/2023;CONCLUIDO;Aceito;Plataforma +Brasil;;423717,78;09/11/2023;09/11/2023
+123813;718166;0332011;;Dispensa de Licitação;;762011;;;;;CONCLUIDO;;Plataforma +Brasil;;7600;;
+870319;905543;0022022;;Inexigibilidade;;012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
+1202698;997143;101;;Cotação Prévia de Preços;;101;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+950386;955717;005/2024;Pregão;Licitação;Eletrônico;007;27/05/2024;10/06/2024;10/06/2024;07/08/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;779775,68;10/01/2025;08/01/2025
+1124766;964973;23;Concorrência;Licitação;Menor Preço;017;15/12/2025;29/12/2025;13/01/2026;13/01/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1349900;02/03/2026;27/02/2026
+956135;929071;10;Concorrência;Licitação;Menor Preço;10;20/05/2024;05/06/2024;;20/06/2024;CONCLUIDO;Aceito;Plataforma +Brasil;;6500415,14;03/07/2024;03/07/2024
+1207101;997143;222;;Cotação Prévia de Preços;;222;;;;;CONCLUIDO;;Plataforma +Brasil;;5000;;
+1211081;997143;002 209;;Cotação Prévia de Preços;;2209;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+729738;868003;0012020;Tomada de Preços;Licitação;Menor Preço;122020;12/05/2020;25/05/2020;22/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;205145,12;12/08/2020;04/08/2020
+862861;905543;0022022;;Inexigibilidade;;00022022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
+1230852;997143;0022020;;Cotação Prévia de Preços;;0022020;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+900476;917818;0022023;Tomada de Preços;Licitação;Menor Preço;022023;16/02/2023;07/03/2023;;28/04/2023;CONCLUIDO;Aceito;Plataforma +Brasil;;951363,61;01/03/2024;19/10/2023
+123812;718166;00872010;Convite;Licitação;Menor Valor;2182010;;28/07/2010;;;CONCLUIDO;;Plataforma +Brasil;;29650;;
+555285;821414;0012017;Tomada de Preços;Licitação;Menor Preço;0072017;06/02/2016;21/02/2017;;05/04/2017;CONCLUIDO;;Plataforma +Brasil;;267454,29;;
+1076264;955717;018;Pregão;Licitação;Eletrônico;37;07/08/2025;07/08/2025;22/08/2025;22/08/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;48120;15/10/2025;01/10/2025
+1189370;997143;00405;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
+1190669;997143;111;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1120;;
+1213906;997143;2210;;Cotação Prévia de Preços;;2210;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+1094214;963049;15;Concorrência;Licitação;Menor Preço;21;17/11/2025;02/12/2025;10/12/2025;11/12/2025;EM_ELABORACAO;;Plataforma +Brasil;;1681653,5;;
+729596;868301;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;27/07/2020;27/07/2020;CONCLUIDO;Rejeitado;Plataforma +Brasil;;534316,36;07/08/2020;04/08/2020
+1189369;997143;402;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
+1169746;963049;07;Concorrência;Licitação;Menor Preço;007;12/05/2026;27/05/2026;27/05/2026;05/06/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;1359000;08/09/2026;19/08/2026
+123818;718166;0132010;Pregão;Licitação;Presencial;2252010;;;;;CONCLUIDO;;Plataforma +Brasil;;154212;;
+1189366;997143;0404;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
+863186;905543;0012022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;440,1;;
+1193248;962667;07;Concorrência;Licitação;Menor Preço;007;27/06/2025;01/07/2025;15/07/2025;25/07/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;8182840;19/08/2026;05/08/2026
+869758;905543;0022022;;Inexigibilidade;;012022;;;;;CONCLUIDO;;Plataforma +Brasil;;32168;;
+1100912;959992;013;Concorrência;Licitação;Menor Preço;19;03/10/2025;20/10/2025;19/11/2025;19/11/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;1000000;15/12/2025;11/12/2025
+1183079;997143;504;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;4000;;
+1101859;908393;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;847299;21/10/2026;21/10/2026
+1190684;997143;109;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
+1190074;997143;209;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
 1210598;997143;2207;;Cotação Prévia de Preços;;2207;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1207190;997143;2203;;Cotação Prévia de Preços;;2203;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
-1209770;997143;2206;;Cotação Prévia de Preços;;2206;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+1207126;997143;224;;Cotação Prévia de Preços;;224;;;;;CONCLUIDO;;Plataforma +Brasil;;2000;;
+808624;909493;0132021;Tomada de Preços;Licitação;Menor Preço;0422021;02/12/2021;17/12/2021;17/01/2022;17/01/2022;CONCLUIDO;Rejeitado;Plataforma +Brasil;;519888,46;17/06/2022;18/05/2022
+1155546;868301;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Aceito;Plataforma +Brasil;;688500;16/06/2026;07/05/2026
+592149;830471;012018;Tomada de Preços;Licitação;Menor Preço;01002018;09/03/2018;02/04/2018;;20/04/2018;CONCLUIDO;;Plataforma +Brasil;;240720,29;;
+1163293;962228;002/2026;;Dispensa de Licitação;;08;;;;15/05/2026;CONCLUIDO;Aceito;Plataforma +Brasil;;88470;29/06/2026;01/06/2026
+867120;905543;042022;;Pesquisa de Mercado (valor abaixo de R$ 8.000,00);;;;;;;CONCLUIDO;;Plataforma +Brasil;;2195,49;;
+753021;906685;73/2021;Pregão;Licitação;Menor Preço;001/2021.;22/02/2021;22/02/2021;;;EM_ELABORACAO;;Sistema Externo;EM_ANDAMENTO;0;;
+1190043;997143;105;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3400;;
 1189371;997143;000406;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;4800;;
+1207198;997143;2205;;Cotação Prévia de Preços;;2205;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+1191055;997143;02202;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+450863;802348;000062015;Tomada de Preços;Licitação;Menor Preço;932015;08/05/2015;27/05/2015;;01/06/2015;CONCLUIDO;;Plataforma +Brasil;;1287022,66;;
+1193161;997143;102;;Cotação Prévia de Preços;;102;;;;;CONCLUIDO;;Plataforma +Brasil;;8000;;
+1189439;997143;208;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
+420231;784198;0032015;Tomada de Preços;Licitação;Menor Preço;812015;;27/04/2015;03/06/2015;03/06/2015;CONCLUIDO;;Plataforma +Brasil;;652851,46;;
+1204009;997143;215;;Cotação Prévia de Preços;;215;;;;;CONCLUIDO;;Plataforma +Brasil;;1600;;
+1190046;997143;219;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;480;;
+1207137;997143;206;;Cotação Prévia de Preços;;206;;;;;CONCLUIDO;;Plataforma +Brasil;;3000;;
+795486;891467;0232021;Concorrência;Licitação;Menor Preço;0022021;20/07/2021;19/09/2021;;27/09/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;1248080,72;10/05/2022;10/12/2021
+702824;844981;0012019;Tomada de Preços;Licitação;Menor Preço;0162019;25/04/2019;13/05/2019;15/05/2019;15/05/2019;CONCLUIDO;Aceito;Plataforma +Brasil;;652127,17;05/02/2020;05/02/2020
+811959;802347;0012021;Concorrência;Licitação;Menor Preço;142021;14/06/2021;15/02/2021;;14/09/2021;CONCLUIDO;;Plataforma +Brasil;;1991434,81;;
+730537;868301;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;22/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;559613,73;10/08/2020;07/08/2020
+515221;805857;0042016;Tomada de Preços;Licitação;Menor Preço;1732016;12/08/2016;31/08/2016;13/09/2016;13/09/2016;CONCLUIDO;;Plataforma +Brasil;;1433579,85;;
+1189367;997143;00401;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;1000;;
+1081616;868301;013;Concorrência;Licitação;Menor Preço;09;27/08/2025;12/09/2025;08/10/2025;08/10/2025;CONCLUIDO;Rejeitado;Plataforma +Brasil;;688500;10/04/2026;16/12/2025
+1181963;997143;502;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;6000;;
+1190683;997143;109;;Cotação Prévia de Preços;;;;;;;CONCLUIDO;;Plataforma +Brasil;;3400;;
+729658;868305;03;Tomada de Preços;Licitação;Menor Preço;015;12/05/2020;29/05/2020;27/07/2020;22/07/2020;CONCLUIDO;Aceito;Plataforma +Brasil;;543316,36;10/08/2020;04/08/2020
+1207190;997143;2203;;Cotação Prévia de Preços;;2203;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
+772370;906685;00062021;Pregão;Licitação;Eletrônico;0182021;18/05/2021;31/05/2021;10/06/2021;10/06/2021;CONCLUIDO;Aceito;Plataforma +Brasil;;118536;19/08/2021;19/07/2021
+1209770;997143;2206;;Cotação Prévia de Preços;;2206;;;;;CONCLUIDO;;Plataforma +Brasil;;2500;;
